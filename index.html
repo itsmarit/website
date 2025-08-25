@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's Marit</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Websites, graphic design, automation programs and other stuff.">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- HERO -->
+    <header id="hero">
+	  <div id="hero-text">
+	    <h1>Marit Hanso</h1>
+		<p>i like coding, design and pizza</p>
+	  </div>
+	</header>
+	<!-- MAIN CONTENT -->
+	<section id="main-back">
+	  <div id="main">
+	    <!-- NAVIGATION -->
+	    <div id="nav">
+		  <div id="nav-projects">
+		    <button data-filter="all" class="active">all</button>
+			<span class="separator">|</span>
+		    <button data-filter="websites">websites</button>
+			<span class="separator">|</span>
+		    <button data-filter="design">graphic design</button>
+			<span class="separator">|</span>
+		    <button data-filter="programs">automation and programs</button>
+		  </div>
+		  <button id="show-blog">blog</button>
+		</div>
+		<!-- PROJECTS -->
+		<div id="projects">
+		  <img data-category="design" data-file="projects/rastbuild-logo.html" src="img/rast-build.png" alt="RAST Build OÜ logo">
+		  <img data-category="programs" data-file="projects/kohvipaus-application.html" src="img/kohvipaus.png" alt="Kohvipaus app">
+		  <img data-category="design" data-file="projects/logo-projektimees.html" src="img/projektimees.png" alt="Projektimees logo">
+		  <img data-category="websites" data-file="projects/arborest-website.html" src="img/arborest.png" alt="ArborEst OÜ website">
+		  <img data-category="design" data-file="projects/builder-brothers-logo.html" src="img/builderbrothers.png" alt="Builder Brothers OÜ logo">
+		  <img data-category="design" data-file="projects/remont-ja-paigaldus.html" src="img/remontjapaigaldus.png" alt="Remont & Paigaldus OÜ brochure">
+		  <img data-category="design" data-file="projects/ventileerija-business-card.html" src="img/visiitkaart.png" alt="Ventileerija OÜ business card">
+		  <img data-category="programs" data-file="projects/simpsonaator-game.html" src="img/simpsonaator.png" alt="Simpsonaator game">
+		</div>
+		<!-- MODAL FOR PROJECTS -->
+		<div id="modal-back">
+		  <div class="modal">
+		    <span id="close-button" class="close">&times;</span>
+			<!-- slides -->
+		    <div class="slides-container">
+			  <img class="slides" src="" alt="pic not found">
+			  <a class="previous">&#10094;</a>
+              <a class="next">&#10095;</a>
+			</div>
+			<!-- project info -->
+			<h3>Project name</h3>
+			<span class="modal-h4">Category 2025</span>
+		    <p class="info">Project info</p>
+		    <p class="tech-stack">Programs and methods used</p>
+		    <ul>
+		      <li>Python</li>
+			  <li>Canva</li>
+			  <li>Inkscape</li>
+		    </ul>
+		  </div>
+		</div>
+		<!-- BLOG SECTION -->
+		<div id="blog">
+		  <a href="post2.html"><p>Yadda yadda text</p></a>
+		  <a href="post1.html"><p>Hello there!</p></a>
+		</div>
+	  </div>
+	</section>
+	<!-- FOOTER -->
+	<footer class="footer">
+	  <p>© 2025 Marit Hanso</p>
+	  <p><a href="mailto:marithanso@gmail.com">Send me an email 👈</a></p>
+	</footer>
+	<script src="js/script.js"></script>
+  </body>
+</html>
