@@ -122,14 +122,16 @@ document.addEventListener("DOMContentLoaded", function() { // when HTML has load
 		  
 			return slideIndex;
 		  }
-		})
-	  modal.style.display = "flex";
-	  window.onclick = function(event) { // user clicks outside the modal -> close it
-		  if (event.target == modal) {
-			modal.style.display = "none";
+			
+	      modal.style.display = "flex";
+	      window.onclick = function(event) { // user clicks outside the modal -> close it
+		    if (event.target == modal) {
+			  modal.style.display = "none";
+		    }
 		  }
-		}
+		});
     });
   }
   
+
 });
