@@ -9,6 +9,13 @@ document.addEventListener("DOMContentLoaded", function() { // when HTML has load
   var closeButton = document.getElementById("close-button");
   var modal = document.getElementById("modal-back");
   var modalContent = modal.querySelector(".modal");
+  var params = new URLSearchParams(window.location.search);
+  var backToBlog = params.get("blog");
+  
+  // first check if user has clicked a 'back to blog' button on a post page
+  if (window.location.hash === "#blog") {
+    showBlog();
+  }  
   
   // go through all buttons for filtering
   for (var i = 0; i < buttons.length; i++) {
@@ -49,7 +56,9 @@ document.addEventListener("DOMContentLoaded", function() { // when HTML has load
   }
 
   // user wants to see the blog -> hide the projects and show the blog
-  blogButton.addEventListener("click", function() {
+  blogButton.addEventListener("click", showBlog);
+  
+  function showBlog() {
     blogSection.style.display = "block";
     projectsSection.style.display = "none";
 	
@@ -58,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() { // when HTML has load
         buttons[k].classList.remove("active");
       }
       blogButton.classList.add("active");
-  });
+  }
   
   // click on project -> change the modal's content to display the relevant info
   for (var l = 0; l < projects.length; l++) {
@@ -122,16 +131,14 @@ document.addEventListener("DOMContentLoaded", function() { // when HTML has load
 		  
 			return slideIndex;
 		  }
-			
-	      modal.style.display = "flex";
-	      window.onclick = function(event) { // user clicks outside the modal -> close it
-		    if (event.target == modal) {
-			  modal.style.display = "none";
-		    }
+		})
+	  modal.style.display = "flex";
+	  window.onclick = function(event) { // user clicks outside the modal -> close it
+		  if (event.target == modal) {
+			modal.style.display = "none";
 		  }
-		});
+		}
     });
   }
   
-
 });
