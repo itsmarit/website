@@ -11,8 +11,13 @@ document.addEventListener("DOMContentLoaded", function() { // when HTML has load
   var modalContent = modal.querySelector(".modal");
   var params = new URLSearchParams(window.location.search);
   var backToBlog = params.get("blog");
-  
-  // first check if user has clicked a 'back to blog' button on a post page
+  var mail = document.getElementById("msg");
+
+  // display mailto link
+  var encMail = "bWFpbHRvOm1hcml0aGFuc29AZ21haWwuY29t";
+  mail.setAttribute("href", atob(encMail));
+	
+  // check if user has clicked a 'back to blog' button on a post page
   if (window.location.hash === "#blog") {
     showBlog();
   }  
@@ -143,3 +148,4 @@ document.addEventListener("DOMContentLoaded", function() { // when HTML has load
   }
   
 });
+
